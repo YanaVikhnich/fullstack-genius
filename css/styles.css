@@ -33,9 +33,11 @@
 
 :root {
   --color-brand-dark: #819b57;
-  --color-brand-light: #465929;
+  --color-brand-normal: #465929;
   --color-primary-dark: #31261a;
   --color-primary-light: #faf7ea;
+  --color-brand-light: #cfcfbc;
+  --color-secondary-dark: #a18268;
 }
 
 /* Base */
@@ -48,6 +50,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  background-color: var(--color-primary-light);
 }
 .section {
   padding: 48px 0;
@@ -59,7 +62,6 @@ body {
   margin: 0 auto;
   padding: 0 24px;
 }
-
 
 h1,
 h2,
@@ -103,7 +105,7 @@ address {
   gap: 40px;
 }
 .header-menu {
-  display: flex; 
+  display: flex;
   flex-grow: 1;
   justify-content: center;
   gap: 64px;
@@ -115,24 +117,28 @@ address {
   font-weight: 900;
   color: #faf7ea;
   text-align: center;
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 
 .hero-title .accent {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 .hero-section {
   padding: 272px 0;
+  background-image: url(../images/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 /* End of the hero section */
 
 /* Button styles */
 .button {
-  background-color: var(--color-brand-light);
+  background-color: var(--color-brand-normal);
   color: var(--color-primary-light);
-  border: 2px solid var(--color-brand-light);
+  border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   cursor: pointer;
   padding: 16px 32px;
@@ -156,13 +162,13 @@ address {
   text-decoration: none;
 }
 .link:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 /* end of the links */
 
 /* Advantages list */
 .advantages-section {
-  background-color: var(--color-brand-light);
+  background-color: var(--color-brand-normal);
   padding: 16px 0;
 }
 
@@ -170,7 +176,6 @@ address {
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  
 }
 
 .advantages-item {
@@ -181,12 +186,15 @@ address {
 /* End of the advantages list */
 
 .section-title .accent {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 .section-title {
   font-size: 64px;
   font-weight: 900;
   line-height: 1.3;
+}
+.section-title.centered {
+  text-align: center;
 }
 
 /* Traditions section */
@@ -200,7 +208,7 @@ address {
   max-width: 710px;
 }
 .traditions-text .brand {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   font-weight: 600;
 }
 .traditions-text .uppercase {
@@ -224,8 +232,22 @@ address {
   margin-bottom: 16px;
 }
 .chefs-title {
-  margin-bottom: 80px;
+  max-width: 520px;
+  margin: 0 auto 80px;
 }
+.chefs-title::before,
+.chefs-title::after {
+  content: '';
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+}
+.chef-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
+}
+
 /* End of the chefs section */
 
 /* Formats section */
@@ -237,6 +259,13 @@ address {
   border: 1px solid grey; /* remove */
   border-radius: 16px;
   padding: 24px;
+  height: 444px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-dark) 100%
+  );
 }
 
 .formats-list {
@@ -246,7 +275,6 @@ address {
 }
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
-  
 }
 
 .formats-title {
@@ -264,6 +292,14 @@ address {
   margin-bottom: 16px;
 }
 /* footer */
+.footer {
+  background-image: url('../images/footer-background.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .address-link {
   color: var(--color-primary-light);
   font-weight: 300;
