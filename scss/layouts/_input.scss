@@ -1,0 +1,31 @@
+.input {
+  position: relative;
+  margin-bottom: 32px;
+
+  &__label {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+    font-size: 16px;
+    line-height: 1.17;
+    color: var(--color-secondary-dark);
+    transition: transform 0.3s;
+  }
+  &__control:focus + &__label {
+    transform: translate(-36px, -40px);
+    color: var(--color-primary-dark);
+  }
+  &__control {
+    width: 100%;
+    padding: 16px 42px;
+    overflow-y: auto;
+    border: 1px solid var(--color-secondary-dark);
+    border-radius: 8px;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-brand-normal);
+    }
+  }
+}

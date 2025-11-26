@@ -1,0 +1,66 @@
+.footer {
+  position: relative;
+  background-image: url('../images/footer-background.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 32px 0;
+
+  &__container {
+    display: flex;
+  }
+  &__nav,
+  &__address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    background-repeat: no-repeat;
+  }
+  &::before {
+    left: 0;
+    background-image: url('../images/decor-bread-small.png');
+    width: 180px;
+    height: 120px;
+  }
+  &::after {
+    right: 0;
+    width: 380px;
+    height: 190px;
+    background-image: url('../images/decor-bread-large.png');
+  }
+  &__logo,
+  &__menu,
+  &__address-list,
+  &__address-info {
+    flex-grow: 1;
+    gap: 20px;
+  }
+  &__address-link {
+    color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+    &:hover {
+      color: var(--color-primary-dark);
+    }
+  }
+  &__address-icon {
+    fill: var(--color-primary-light);
+
+    &:hover {
+      fill: var(--color-brand-normal);
+    }
+  }
+
+  &__address-copyright {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
