@@ -26,12 +26,13 @@
 
 @import './components/chef-card';
 @import './layouts/chefs-section';
+@import './components/pagination';
 
-@import './layouts/format-section';
-
+@import './layouts/mobile-menu';
 @import './components/format-card';
-@import './components/carousel';
 
+@import './components/carousel';
+@import './layouts/formats-section';
 @import './layouts/contact-section';
 
 @import './layouts/footer';

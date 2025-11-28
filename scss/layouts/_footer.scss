@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  
   background-image: url('../images/footer-background.png');
   background-color: var(--color-primary-dark);
   background-repeat: no-repeat;
@@ -9,12 +10,18 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
+  }
+  &__address-contacts {
+    display: flex;
+    flex-direction: column;
   }
   &__nav,
   &__address {
     display: flex;
-    flex-basis: 50%;
+    flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
   &::before,
   &::after {
@@ -62,5 +69,16 @@
   &__address-copyright {
     font-size: 14px;
     font-weight: 400;
+  }
+  @media screen and (min-width: $bp-tablet) {
+ &__container {
+    flex-direction: row;
+  }
+  &__nav,
+  &__address {
+    flex-direction: row;
+    flex-basis: 50%;
+    text-align: left;
+  }
   }
 }

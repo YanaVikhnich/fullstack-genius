@@ -6,7 +6,8 @@
   }
   &__container {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    gap: 24px;
   }
   &__form-field {
     margin-bottom: 24px;
@@ -15,9 +16,28 @@
     flex-shrink: 0;
     border: none;
     border-radius: 16px;
+    margin: 0 -24px;
+    height: 176px;
   }
   &__form-button {
     margin: 0 auto 16px;
     display: block;
+  }
+  @media screen and (min-width: $bp-tablet) {
+    &__map {
+      width:320px;
+      margin: auto;
+    height: 500px;
+    }
+    &__container {
+    flex-direction: row;
+    gap: 32px;
+  }
+  }
+  @media dcreen and (min-width: $bp-desktop) {
+     &__map {
+      width:600px;
+    height: 595px;
+    }
   }
 }
